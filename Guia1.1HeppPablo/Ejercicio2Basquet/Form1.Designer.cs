@@ -34,7 +34,7 @@
             // 
             // btAgregarJugador
             // 
-            this.btAgregarJugador.Location = new System.Drawing.Point(53, 25);
+            this.btAgregarJugador.Location = new System.Drawing.Point(234, 47);
             this.btAgregarJugador.Name = "btAgregarJugador";
             this.btAgregarJugador.Size = new System.Drawing.Size(140, 32);
             this.btAgregarJugador.TabIndex = 0;
@@ -45,7 +45,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 130);
+            this.label1.Location = new System.Drawing.Point(456, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;

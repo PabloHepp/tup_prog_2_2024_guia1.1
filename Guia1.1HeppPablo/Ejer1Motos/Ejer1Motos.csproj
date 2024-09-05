@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9D708C9-1963-4E00-A44B-077753B65DF1}</ProjectGuid>
+    <ProjectGuid>{8254F235-6CFA-4F65-A68C-BFA7346FD54D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ejercicio2Basquet</RootNamespace>
-    <AssemblyName>Ejercicio2Basquet</AssemblyName>
+    <RootNamespace>Ejer1Motos</RootNamespace>
+    <AssemblyName>Ejer1Motos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,26 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarJug.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarJug.Designer.cs">
-      <DependentUpon>AgregarJug.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Equipo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Jugador.cs" />
-    <Compile Include="Partido.cs" />
+    <Compile Include="Moto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AgregarJug.resx">
-      <DependentUpon>AgregarJug.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="VerResultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerResultados.Designer.cs">
+      <DependentUpon>VerResultados.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +73,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VerResultados.resx">
+      <DependentUpon>VerResultados.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

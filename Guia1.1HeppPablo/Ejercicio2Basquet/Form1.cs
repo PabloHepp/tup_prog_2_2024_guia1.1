@@ -42,7 +42,7 @@ namespace Ejercicio2Basquet
                 nuevo.CargarPunto(cantTriples, 3);
 
                 puntos = nuevo.VerPuntos();
-                label1.Text = Convert.ToString(puntos);
+                //label1.Text = Convert.ToString(puntos);
             }
             
             
