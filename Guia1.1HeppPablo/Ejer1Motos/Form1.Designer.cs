@@ -32,18 +32,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.tbMarca = new System.Windows.Forms.TextBox();
+            this.tbValorFab = new System.Windows.Forms.TextBox();
+            this.numModelo = new System.Windows.Forms.NumericUpDown();
+            this.numAño = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbTasa = new System.Windows.Forms.TextBox();
+            this.tbVida = new System.Windows.Forms.TextBox();
             this.btCalcular = new System.Windows.Forms.Button();
             this.btCerrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numModelo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAño)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,33 +83,64 @@
             this.label4.Text = "Valor de Fabricación $";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // tbMarca
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.tbMarca.Location = new System.Drawing.Point(145, 28);
+            this.tbMarca.Name = "tbMarca";
+            this.tbMarca.Size = new System.Drawing.Size(100, 20);
+            this.tbMarca.TabIndex = 4;
             // 
-            // textBox2
+            // tbValorFab
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 161);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.tbValorFab.Location = new System.Drawing.Point(145, 161);
+            this.tbValorFab.Name = "tbValorFab";
+            this.tbValorFab.Size = new System.Drawing.Size(100, 20);
+            this.tbValorFab.TabIndex = 5;
             // 
-            // numericUpDown1
+            // numModelo
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(145, 69);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown1.TabIndex = 6;
+            this.numModelo.Location = new System.Drawing.Point(145, 69);
+            this.numModelo.Maximum = new decimal(new int[] {
+            2023,
+            0,
+            0,
+            0});
+            this.numModelo.Minimum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numModelo.Name = "numModelo";
+            this.numModelo.Size = new System.Drawing.Size(100, 20);
+            this.numModelo.TabIndex = 6;
+            this.numModelo.Value = new decimal(new int[] {
+            2010,
+            0,
+            0,
+            0});
+            this.numModelo.ValueChanged += new System.EventHandler(this.numModelo_ValueChanged);
             // 
-            // numericUpDown2
+            // numAño
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(145, 115);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown2.TabIndex = 7;
+            this.numAño.Location = new System.Drawing.Point(145, 115);
+            this.numAño.Maximum = new decimal(new int[] {
+            2024,
+            0,
+            0,
+            0});
+            this.numAño.Minimum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numAño.Name = "numAño";
+            this.numAño.Size = new System.Drawing.Size(100, 20);
+            this.numAño.TabIndex = 7;
+            this.numAño.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
             // 
             // label5
             // 
@@ -129,19 +160,19 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Vida Util (Años)";
             // 
-            // textBox3
+            // tbTasa
             // 
-            this.textBox3.Location = new System.Drawing.Point(452, 28);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
+            this.tbTasa.Location = new System.Drawing.Point(452, 28);
+            this.tbTasa.Name = "tbTasa";
+            this.tbTasa.Size = new System.Drawing.Size(100, 20);
+            this.tbTasa.TabIndex = 10;
             // 
-            // textBox4
+            // tbVida
             // 
-            this.textBox4.Location = new System.Drawing.Point(452, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 11;
+            this.tbVida.Location = new System.Drawing.Point(452, 74);
+            this.tbVida.Name = "tbVida";
+            this.tbVida.Size = new System.Drawing.Size(100, 20);
+            this.tbVida.TabIndex = 11;
             // 
             // btCalcular
             // 
@@ -150,8 +181,9 @@
             this.btCalcular.Name = "btCalcular";
             this.btCalcular.Size = new System.Drawing.Size(100, 44);
             this.btCalcular.TabIndex = 12;
-            this.btCalcular.Text = "Calcular";
+            this.btCalcular.Text = "Calcular Costo";
             this.btCalcular.UseVisualStyleBackColor = true;
+            this.btCalcular.Click += new System.EventHandler(this.btCalcular_Click);
             // 
             // btCerrar
             // 
@@ -162,6 +194,7 @@
             this.btCerrar.TabIndex = 13;
             this.btCerrar.Text = "Cerrar";
             this.btCerrar.UseVisualStyleBackColor = true;
+            this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
             // 
             // Form1
             // 
@@ -170,22 +203,23 @@
             this.ClientSize = new System.Drawing.Size(622, 372);
             this.Controls.Add(this.btCerrar);
             this.Controls.Add(this.btCalcular);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbVida);
+            this.Controls.Add(this.tbTasa);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.numAño);
+            this.Controls.Add(this.numModelo);
+            this.Controls.Add(this.tbValorFab);
+            this.Controls.Add(this.tbMarca);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numModelo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAño)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,16 +231,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         public System.Windows.Forms.Button btCalcular;
         public System.Windows.Forms.Button btCerrar;
+        public System.Windows.Forms.NumericUpDown numAño;
+        public System.Windows.Forms.TextBox tbMarca;
+        public System.Windows.Forms.TextBox tbValorFab;
+        public System.Windows.Forms.TextBox tbTasa;
+        public System.Windows.Forms.TextBox tbVida;
+        public System.Windows.Forms.NumericUpDown numModelo;
     }
 }
 
