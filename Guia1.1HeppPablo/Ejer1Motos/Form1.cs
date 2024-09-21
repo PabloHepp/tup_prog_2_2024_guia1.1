@@ -46,13 +46,14 @@ namespace Ejer1Motos
             double deplineal = cotizacion.CalcularDepreciacionLineal(actual, vida);
             double depAnual = cotizacion.CalcularDepreciacionAnual(actual, tasa);
 
-            while (resultados.ShowDialog() == DialogResult.OK)
-            {
-                resultados.listBResultados.Items.Add(datos);
-                resultados.listBResultados.Items.Add(Convert.ToString($"Depreciacion lineal: {deplineal}"));
-                resultados.listBResultados.Items.Add(Convert.ToString($"Depreciación anual: {depAnual}"));
-                
-            }
+                    
+            resultados.listBResultados.Items.Add(datos);
+            resultados.listBResultados.Items.Add(Convert.ToString($"Depreciacion lineal: {deplineal}"));
+            resultados.listBResultados.Items.Add(Convert.ToString($"Depreciación anual: {depAnual}"));
+
+            resultados.ShowDialog();
+
+            resultados.listBResultados.Items.Clear();
 
 
         }
